@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0-*",
+  "description": "SQLBuilder Console Application",
+  "authors": [ "it" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "commands": {
+    "SQLBuilder": "SQLBuilder"
+  },
+
+  "frameworks": {
+    "dnx451": {
+    }
+  },
+
+  "dependencies": {
+    "Microsoft.CSharp": "4.0.1-beta-23516",
+    "System.Collections": "4.0.11-beta-23516",
+    "System.Data.SqlClient": "4.1.0",
+    "System.Linq": "4.0.1-beta-23516",
+    "System.Threading": "4.0.11-beta-23516"
+  }
+}
