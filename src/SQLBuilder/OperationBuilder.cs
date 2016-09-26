@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using SQLBuilder.SqlDataExtentions;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace SQLBuilder
@@ -26,7 +27,7 @@ namespace SQLBuilder
         private BuildResult BuildCommonOperation(string spaces)
         {
             var sqlcommand = $"{spaces}{this.Condition} [{this.Column}] {this.Operation} @{this.Column}";
-            var parameter = GetSqlParameter(this.Column, this.Values[0]);
+            var parameter = SqlParameterExtention.GetSqlParameter(this.Column, this.Values[0]);
 
             var buildResult = new BuildResult(sqlcommand, new List<SqlParameter> { parameter });
             return buildResult;
@@ -37,8 +38,8 @@ namespace SQLBuilder
             var parameterNameA = $"{this.Column}{Constants.OPERATION_BETWEEN_VALUE_A}";
             var parameterNameB = $"{this.Column}{Constants.OPERATION_BETWEEN_VALUE_B}";
 
-            var parameterA = GetSqlParameter(parameterNameA, this.Values[0]);
-            var parameterB = GetSqlParameter(parameterNameB, this.Values[1]);
+            var parameterA = SqlParameterExtention.GetSqlParameter(parameterNameA, this.Values[0]);
+            var parameterB = SqlParameterExtention.GetSqlParameter(parameterNameB, this.Values[1]);
 
             var sqlcommand = $"{spaces}{this.Condition} [{this.Column}] {this.Operation} @{parameterNameA} {Constants.CONDITION_AND} @{parameterNameB}";
 
@@ -62,22 +63,15 @@ namespace SQLBuilder
                 var parameterName = $"{ this.Column }_{ PART[this.Operation]}_{i}";
                 list.Add($"@{parameterName}");
 
-                var parameter = GetSqlParameter(parameterName, this.Values[i]);
+                var parameter = SqlParameterExtention.GetSqlParameter(parameterName, this.Values[i]);
                 parameters.Add(parameter);
             }
 
             var text = string.Join(", ", list).Trim();
-            var sqlcommand = $"{spaces}{this.Condition} [{this.Column}] {this.Operation} ({parameters})";
+            var sqlcommand = $"{spaces}{this.Condition} [{this.Column}] {this.Operation} ({text})";
 
             var buildResult = new BuildResult(sqlcommand, parameters);
             return buildResult;
-        }
-
-        private SqlParameter GetSqlParameter(string parameterName, object value)
-        {
-            var parameter = new SqlParameter(parameterName, value);
-            //TODO: Configurar o parâmetro
-            return parameter;
         }
     }
 }

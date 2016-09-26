@@ -7,11 +7,6 @@ namespace SQLBuilder
 {
     public class SelectBuilder : SQLBuilder<ISelectBuilder>, ISelectBuilder
     {
-        private const string SELECT = "SELECT";
-        private const string FROM = "FROM";
-        private const string DISTINCT = "DISTINCT";
-        private const string TOP = "TOP";
-
         private string _distinct;
         private string _top;
 
@@ -24,13 +19,13 @@ namespace SQLBuilder
 
         public ISelectBuilder Top(int top)
         {
-            this._top = $"{TOP} {top}";
+            this._top = $"{Constants.TOP} {top}";
             return this;
         }
 
         public ISelectBuilder Distinct()
         {
-            this._distinct = DISTINCT;
+            this._distinct = Constants.DISTINCT;
             return this;
         }
 
@@ -51,11 +46,8 @@ namespace SQLBuilder
 
         public BuildResult Build()
         {
-            const string BREAK_LINE = ",\n";
-            const string SELECT_SPACES = "       ";
-
             var sb = new StringBuilder();
-            sb.Append(SELECT);
+            sb.Append(Constants.SELECT);
 
             if (!string.IsNullOrWhiteSpace(this._distinct))
                 sb.Append($" {this._distinct}");
@@ -65,10 +57,10 @@ namespace SQLBuilder
 
             var columns = "\n";
             foreach (var column in this._columns)
-                columns += SELECT_SPACES + $"[{column}]" + BREAK_LINE;
+                columns += Constants.SELECT_SPACES + $"[{column}]" + Constants.BREAK_LINE;
 
-            sb.AppendLine(columns.RemoveLastChars(BREAK_LINE.Length));
-            sb.AppendLine($"{FROM} {this.GetTableSchema()}");
+            sb.AppendLine(columns.RemoveLastChars(Constants.BREAK_LINE.Length));
+            sb.AppendLine($"{Constants.FROM} {this.GetTableSchema()}");
 
             var whereResult = this.BuildWhere();
             sb.Append(whereResult.SQLCommand);

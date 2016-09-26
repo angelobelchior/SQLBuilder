@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace SQLBuilder.Interfaces
+﻿namespace SQLBuilder.Interfaces
 {
-    public interface IUpdateBuilder
+    public interface IUpdateBuilder : IWhereBuilder<IUpdateBuilder>
     {
+        IUpdateBuilder Table(string table, string schema = "");
+        IUpdateBuilder Set(string column, object value);
+
+        BuildResult Build();
     }
 }

@@ -86,6 +86,8 @@
 -r:"C:\Users\ÂngeloBelchior\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 "C:\mygit\SQLBuilder\src\SQLBuilder\BuildResult.cs"
 "C:\mygit\SQLBuilder\src\SQLBuilder\Constants.cs"
+"C:\mygit\SQLBuilder\src\SQLBuilder\DeleteBuilder.cs"
+"C:\mygit\SQLBuilder\src\SQLBuilder\IDeleteBuilder.cs"
 "C:\mygit\SQLBuilder\src\SQLBuilder\OperationBuilder.cs"
 "C:\mygit\SQLBuilder\src\SQLBuilder\Program.cs"
 "C:\mygit\SQLBuilder\src\SQLBuilder\SelectBuilder.cs"
@@ -99,3 +101,4 @@
 "C:\mygit\SQLBuilder\src\SQLBuilder\Interfaces\IUpdateBuilder.cs"
 "C:\mygit\SQLBuilder\src\SQLBuilder\Interfaces\IWhereBuilder.cs"
 "C:\mygit\SQLBuilder\src\SQLBuilder\Properties\AssemblyInfo.cs"
+"C:\mygit\SQLBuilder\src\SQLBuilder\SqlDataExtentions\SqlParameterExtention.cs"

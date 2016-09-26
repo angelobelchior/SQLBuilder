@@ -2,6 +2,18 @@
 {
     public class Constants
     {
+        public const string SELECT = "SELECT";
+        public const string FROM = "FROM";
+        public const string DISTINCT = "DISTINCT";
+        public const string TOP = "TOP";
+        public const string BREAK_LINE = ",\n";
+        public const string SELECT_SPACES = "       ";
+
+        public const string UPDATE = "UPDATE TABLE";
+        public const string SET = "SET";
+
+        public const string DELETE = "DELETE TABLE";
+
         public const string WHERE = "WHERE";
         public const string CONDITION_AND = "AND";
         public const string CONDITION_OR = "OR";
