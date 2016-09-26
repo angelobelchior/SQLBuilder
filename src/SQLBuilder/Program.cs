@@ -12,7 +12,7 @@ namespace SQLBuilder
         {
             var select = new SelectBuilder();
 
-            int? age = 1;
+            int? age = null;
 
             int? teste = null;
 
@@ -30,9 +30,9 @@ namespace SQLBuilder
                     .Or.Where("Age").Between(1, 3).If(true)
                     .Or.Where("Name").Like("%Angelo%")
                     .And.Where("CreatedDate").Eq(teste)
-                  .GetSelectCommand();
+                  .Build();
 
-            Console.WriteLine(command);
+            Console.WriteLine(command.SQLCommand);
             Console.ReadKey();
         }
     }
