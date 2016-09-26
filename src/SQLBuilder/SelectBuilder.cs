@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SQLBuilder
 {
-    public class SelectBuilder : SQLBuilder<ISelectBuilder>, ISelectBuilder
+    public class SelectBuilder : WhereBuilder<ISelectBuilder>, ISelectBuilder
     {
         private string _distinct;
         private string _top;

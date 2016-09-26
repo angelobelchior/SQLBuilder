@@ -7,7 +7,7 @@ using System.Text;
 namespace SQLBuilder
 {
 
-    public class UpdateBuilder : SQLBuilder<IUpdateBuilder>, IUpdateBuilder
+    public class UpdateBuilder : WhereBuilder<IUpdateBuilder>, IUpdateBuilder
     {
         private Dictionary<string, SqlParameter> _columns = new Dictionary<string, SqlParameter>();
 
