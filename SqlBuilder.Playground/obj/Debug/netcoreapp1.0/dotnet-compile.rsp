@@ -1,5 +1,5 @@
---temp-output:c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder.Playground\obj\Debug\netcoreapp1.0\
---out:c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder.Playground\bin\Debug\netcoreapp1.0\SqlBuilder.Playground.dll
+--temp-output:C:\mygit\SQLBuilder\SqlBuilder.Playground\obj\Debug\netcoreapp1.0\
+--out:C:\mygit\SQLBuilder\SqlBuilder.Playground\bin\Debug\netcoreapp1.0\SqlBuilder.Playground.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -88,6 +88,6 @@
 --reference:C:\Users\ÂngeloBelchior\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\ÂngeloBelchior\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\ÂngeloBelchior\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---reference:c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\bin\Debug\netcoreapp1.0\SqlBuilder.dll
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder.Playground\Program.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder.Playground\Properties\AssemblyInfo.cs
+--reference:C:\mygit\SQLBuilder\SqlBuilder\bin\Debug\netcoreapp1.0\SqlBuilder.dll
+C:\mygit\SQLBuilder\SqlBuilder.Playground\Program.cs
+C:\mygit\SQLBuilder\SqlBuilder.Playground\Properties\AssemblyInfo.cs

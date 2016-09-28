@@ -1,5 +1,5 @@
---temp-output:c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\obj\Debug\netcoreapp1.0\
---out:c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\bin\Debug\netcoreapp1.0\SqlBuilder.dll
+--temp-output:C:\mygit\SQLBuilder\SqlBuilder\obj\Debug\netcoreapp1.0\
+--out:C:\mygit\SQLBuilder\SqlBuilder\bin\Debug\netcoreapp1.0\SqlBuilder.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -87,20 +87,20 @@
 --reference:C:\Users\ÂngeloBelchior\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\ÂngeloBelchior\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\ÂngeloBelchior\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\BuildResult.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\Constants.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\DeleteBuilder.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\IDeleteBuilder.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\OperationBuilder.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\SelectBuilder.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\UpdateBuilder.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\WhereBuilder.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\Interfaces\IConditions.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\Interfaces\IIf.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\Interfaces\IOperators.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\Interfaces\ISelectBuilder.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\Interfaces\IUpdateBuilder.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\Interfaces\IWhereBuilder.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\Properties\AssemblyInfo.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\SqlDataExtentions\SqlParameterExtention.cs
-c:\users\ângelobelchior\documents\visual studio 2015\Projects\SqlBuilder\SqlBuilder\Util\ExtentionMethods.cs
+C:\mygit\SQLBuilder\SqlBuilder\BuildResult.cs
+C:\mygit\SQLBuilder\SqlBuilder\Constants.cs
+C:\mygit\SQLBuilder\SqlBuilder\DeleteBuilder.cs
+C:\mygit\SQLBuilder\SqlBuilder\OperationBuilder.cs
+C:\mygit\SQLBuilder\SqlBuilder\SelectBuilder.cs
+C:\mygit\SQLBuilder\SqlBuilder\UpdateBuilder.cs
+C:\mygit\SQLBuilder\SqlBuilder\WhereBuilder.cs
+C:\mygit\SQLBuilder\SqlBuilder\Interfaces\IConditions.cs
+C:\mygit\SQLBuilder\SqlBuilder\Interfaces\IDeleteBuilder.cs
+C:\mygit\SQLBuilder\SqlBuilder\Interfaces\IIf.cs
+C:\mygit\SQLBuilder\SqlBuilder\Interfaces\IOperators.cs
+C:\mygit\SQLBuilder\SqlBuilder\Interfaces\ISelectBuilder.cs
+C:\mygit\SQLBuilder\SqlBuilder\Interfaces\IUpdateBuilder.cs
+C:\mygit\SQLBuilder\SqlBuilder\Interfaces\IWhereBuilder.cs
+C:\mygit\SQLBuilder\SqlBuilder\Properties\AssemblyInfo.cs
+C:\mygit\SQLBuilder\SqlBuilder\SqlDataExtentions\SqlParameterExtention.cs
+C:\mygit\SQLBuilder\SqlBuilder\Util\ExtentionMethods.cs

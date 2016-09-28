@@ -1,6 +1,6 @@
 ﻿using SqlBuilder.Interfaces;
 
-namespace SqlBuilder
+namespace SqlBuilder.Interfaces
 {
     public interface IDeleteBuilder : IWhereBuilder<IDeleteBuilder>
     {

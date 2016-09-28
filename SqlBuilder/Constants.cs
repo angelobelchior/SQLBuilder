@@ -1,6 +1,6 @@
 ﻿namespace SqlBuilder
 {
-    public class Constants
+    internal class Constants
     {
         public const string SELECT = "SELECT";
         public const string FROM = "FROM";

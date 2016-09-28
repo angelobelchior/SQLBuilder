@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using SqlBuilder.Interfaces;
+using System.Text;
 
 namespace SqlBuilder
 {

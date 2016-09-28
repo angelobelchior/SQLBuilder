@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using SqlBuilder.Interfaces;
 using System.Data.SqlClient;
 using System.Text;
+using SqlBuilder.Util;
 
 namespace SqlBuilder
 {
@@ -59,7 +60,7 @@ namespace SqlBuilder
 
         protected void SetTableSchema(string table, string schema = "")
         {
-            Throw.IfIsNullOrWhiteSpace(table, nameof(table));
+            Throw.IfIsNullOrEmpty(table, nameof(table));
 
             this._table = table;
             this._schema = schema;
