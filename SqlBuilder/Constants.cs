@@ -9,6 +9,10 @@
         public const string SELECT_BREAK_LINE = ",\n";
         public const string SELECT_SELECT_SPACES = "       ";
 
+        public const string INSERT = "INSERT INTO";
+        public const string INSERT_VALUES = "VALUES";
+        public const string INSERT_BREAK_LINE = "\n";
+
         public const string UPDATE = "UPDATE TABLE";
         public const string UPDATE_SET = "SET";
 

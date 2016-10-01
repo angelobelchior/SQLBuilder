@@ -7,7 +7,7 @@ using SqlBuilder.Util;
 
 namespace SqlBuilder
 {
-    public class WhereBuilder<T> : IWhereBuilder<T>
+    public abstract class SqlBuilderBase<T> : IWhereBuilder<T>
     {
         private string _schema;
         private string _table;
@@ -73,16 +73,16 @@ namespace SqlBuilder
         public T And => this.AndOr(Constants.WHERE_CONDITION_AND);
         public T Or => this.AndOr(Constants.WHERE_CONDITION_OR);
 
-        public T Diff(object value) => this.Operations(Constants.WHERE_OPERATION_DIFF, value);
-        public T Eq(object value) => this.Operations(Constants.WHERE_OPERATION_EQ, value);
-        public T Like(object value) => this.Operations(Constants.WHERE_OPERATION_LIKE, value);
-        public T Gt(object value) => this.Operations(Constants.WHERE_OPERATION_GT, value);
-        public T Lt(object value) => this.Operations(Constants.WHERE_OPERATION_LT, value);
-        public T GtEq(object value) => this.Operations(Constants.WHERE_OPERATION_GT_EQ, value);
-        public T LtEq(object value) => this.Operations(Constants.WHERE_OPERATION_LT_EQ, value);
-        public T Between(object value, object anotherValue) => this.Operations(Constants.WHERE_OPERATION_BETWEEN, value, anotherValue);
-        public T In(params object[] values) => this.Operations(Constants.WHERE_OPERATION_IN, values);
-        public T NotIn(params object[] values) => this.Operations(Constants.WHERE_OPERATION_NOT_IN, values);
+        public T Diff<V>(V value) => this.Operations(Constants.WHERE_OPERATION_DIFF, value);
+        public T Eq<V>(V value) => this.Operations(Constants.WHERE_OPERATION_EQ, value);
+        public T Like<V>(V value) => this.Operations(Constants.WHERE_OPERATION_LIKE, value);
+        public T Gt<V>(V value) => this.Operations(Constants.WHERE_OPERATION_GT, value);
+        public T Lt<V>(V value) => this.Operations(Constants.WHERE_OPERATION_LT, value);
+        public T GtEq<V>(V value) => this.Operations(Constants.WHERE_OPERATION_GT_EQ, value);
+        public T LtEq<V>(V value) => this.Operations(Constants.WHERE_OPERATION_LT_EQ, value);
+        public T Between<V>(V value, V anotherValue) => this.Operations(Constants.WHERE_OPERATION_BETWEEN, value, anotherValue);
+        public T In<V>(params V[] values) => this.Operations(Constants.WHERE_OPERATION_IN, values);
+        public T NotIn<V>(params V[] values) => this.Operations(Constants.WHERE_OPERATION_NOT_IN, values);
 
         public T If(bool condition) => this.If(() => condition);
         public T If<N>(Nullable<N> nullable) where N : struct => this.If(nullable.HasValue);
@@ -95,7 +95,7 @@ namespace SqlBuilder
             return this.Instance;
         }
 
-        private T Operations(string operation, params object[] values)
+        private T Operations<V>(string operation, params V[] values)
         {
             if (string.IsNullOrWhiteSpace(this._column)) throw new InvalidOperationException("Empty column");
 

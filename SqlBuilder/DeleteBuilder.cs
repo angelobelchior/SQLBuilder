@@ -3,7 +3,7 @@ using System.Text;
 
 namespace SqlBuilder
 {
-    public class DeleteBuilder : WhereBuilder<IDeleteBuilder>, IDeleteBuilder
+    public class DeleteBuilder : SqlBuilderBase<IDeleteBuilder>, IDeleteBuilder
     {
         public DeleteBuilder()
         {

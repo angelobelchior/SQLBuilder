@@ -3,7 +3,7 @@
     public interface IUpdateBuilder : IWhereBuilder<IUpdateBuilder>
     {
         IUpdateBuilder Table(string table, string schema = "");
-        IUpdateBuilder Set(string column, object value);
+        IUpdateBuilder Set<T>(string column, T value);
 
         BuildResult Build();
     }

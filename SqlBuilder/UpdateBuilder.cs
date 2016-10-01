@@ -7,7 +7,7 @@ using SqlBuilder.Util;
 namespace SqlBuilder
 {
 
-    public class UpdateBuilder : WhereBuilder<IUpdateBuilder>, IUpdateBuilder
+    public class UpdateBuilder : SqlBuilderBase<IUpdateBuilder>, IUpdateBuilder
     {
         private Dictionary<string, SqlParameter> _columns = new Dictionary<string, SqlParameter>();
 
@@ -22,7 +22,7 @@ namespace SqlBuilder
             return this;
         }
 
-        public IUpdateBuilder Set(string column, object value)
+        public IUpdateBuilder Set<T>(string column, T value)
         {
             var parameter = SqlDataExtentions.SqlParameterExtention.GetSqlParameter(column, value);
             this._columns.Add(column, parameter);

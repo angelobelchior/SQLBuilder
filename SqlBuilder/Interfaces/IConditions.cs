@@ -2,16 +2,16 @@
 {
     public interface IConditions<T>
     {
-        T Between(object value, object anotherValue);
-        T Diff(object value);
-        T Eq(object value);
-        T Gt(object value);
-        T GtEq(object value);
-        T Like(object value);
-        T Lt(object value);
-        T LtEq(object value);
+        T Between<V>(V value, V anotherValue);
+        T Diff<V>(V value);
+        T Eq<V>(V value);
+        T Gt<V>(V value);
+        T GtEq<V>(V value);
+        T Like<V>(V value);
+        T Lt<V>(V value);
+        T LtEq<V>(V value);
         T Where(string column);
-        T In(params object[] values);
-        T NotIn(params object[] values);
+        T In<V>(params V[] values);
+        T NotIn<V>(params V[] values);
     }
 }

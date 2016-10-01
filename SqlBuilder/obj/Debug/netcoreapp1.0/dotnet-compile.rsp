@@ -90,13 +90,15 @@
 C:\Git\SQLBuilder\SqlBuilder\BuildResult.cs
 C:\Git\SQLBuilder\SqlBuilder\Constants.cs
 C:\Git\SQLBuilder\SqlBuilder\DeleteBuilder.cs
+C:\Git\SQLBuilder\SqlBuilder\InsertBuilder.cs
 C:\Git\SQLBuilder\SqlBuilder\OperationBuilder.cs
 C:\Git\SQLBuilder\SqlBuilder\SelectBuilder.cs
+C:\Git\SQLBuilder\SqlBuilder\SqlBuilderBase.cs
 C:\Git\SQLBuilder\SqlBuilder\UpdateBuilder.cs
-C:\Git\SQLBuilder\SqlBuilder\WhereBuilder.cs
 C:\Git\SQLBuilder\SqlBuilder\Interfaces\IConditions.cs
 C:\Git\SQLBuilder\SqlBuilder\Interfaces\IDeleteBuilder.cs
 C:\Git\SQLBuilder\SqlBuilder\Interfaces\IIf.cs
+C:\Git\SQLBuilder\SqlBuilder\Interfaces\IInsertBuilder.cs
 C:\Git\SQLBuilder\SqlBuilder\Interfaces\IOperators.cs
 C:\Git\SQLBuilder\SqlBuilder\Interfaces\ISelectBuilder.cs
 C:\Git\SQLBuilder\SqlBuilder\Interfaces\IUpdateBuilder.cs

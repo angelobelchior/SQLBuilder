@@ -6,7 +6,7 @@ using SqlBuilder.Util;
 
 namespace SqlBuilder
 {
-    public class SelectBuilder : WhereBuilder<ISelectBuilder>, ISelectBuilder
+    public class SelectBuilder : SqlBuilderBase<ISelectBuilder>, ISelectBuilder
     {
         private string _distinct;
         private string _top;

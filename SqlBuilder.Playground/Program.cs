@@ -7,6 +7,7 @@ namespace SqlBuilder.Playground
         public static void Main(string[] args)
         {
             var select = new SelectBuilder();
+            var insert = new InsertBuilder();
             var update = new UpdateBuilder();
             var delete = new DeleteBuilder();
 
@@ -30,6 +31,14 @@ namespace SqlBuilder.Playground
                     .And.Where("CreatedDate").Eq(teste)
                   .Build();
             Console.WriteLine(selectBuilder.SQLCommand);
+
+            var insertBuilder =
+            insert.Into("table", "schema")
+                  .Value("ID", 1)
+                  .Value("Age", 20)
+                  .Value("Name", "Angelo")
+                  .Build();
+            Console.WriteLine(insertBuilder.SQLCommand);
 
             var updateBuilder =
             update.Table("Table", "schema")
