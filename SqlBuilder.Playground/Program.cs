@@ -32,7 +32,7 @@ namespace SqlBuilder.Playground
             Console.WriteLine(selectBuilder.SQLCommand);
 
             var updateBuilder =
-            update.Table("Table")
+            update.Table("Table", "schema")
                   .Set("ID", 1)
                   .Set("Age", 1)
                   .Set("Name", "José")

@@ -37,9 +37,9 @@ namespace SqlBuilder
 
             var columns = "\n";
             foreach (var colum in this._columns)
-                columns += $"{Constants.SET} [{colum.Key}] = @{colum.Key}" + Constants.BREAK_LINE;
+                columns += $"{Constants.UPDATE_SET} [{colum.Key}] = @{colum.Key}" + Constants.SELECT_BREAK_LINE;
 
-            sb.AppendLine(columns.RemoveLastChars(Constants.BREAK_LINE.Length));
+            sb.AppendLine(columns.RemoveLastChars(Constants.SELECT_BREAK_LINE.Length));
 
             var whereResult = this.BuildWhere();
             sb.Append(whereResult.SQLCommand);

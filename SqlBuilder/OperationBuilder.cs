@@ -14,9 +14,9 @@ namespace SqlBuilder
         internal BuildResult Build(string spaces)
         {
             BuildResult buildResult;
-            if (this.Operation.Equals(Constants.OPERATION_BETWEEN))
+            if (this.Operation.Equals(Constants.WHERE_OPERATION_BETWEEN))
                 buildResult = BuildBetweenOperation(spaces);
-            else if (this.Operation.Equals(Constants.OPERATION_IN) || this.Operation.Equals(Constants.OPERATION_NOT_IN))
+            else if (this.Operation.Equals(Constants.WHERE_OPERATION_IN) || this.Operation.Equals(Constants.WHERE_OPERATION_NOT_IN))
                 buildResult = BuildInNotInOperation(spaces);
             else
                 buildResult = BuildCommonOperation(spaces);
@@ -35,13 +35,13 @@ namespace SqlBuilder
 
         private BuildResult BuildBetweenOperation(string spaces)
         {
-            var parameterNameA = $"{this.Column}{Constants.OPERATION_BETWEEN_VALUE_A}";
-            var parameterNameB = $"{this.Column}{Constants.OPERATION_BETWEEN_VALUE_B}";
+            var parameterNameA = $"{this.Column}{Constants.WHERE_OPERATION_BETWEEN_VALUE_A}";
+            var parameterNameB = $"{this.Column}{Constants.WHERE_OPERATION_BETWEEN_VALUE_B}";
 
             var parameterA = SqlParameterExtention.GetSqlParameter(parameterNameA, this.Values[0]);
             var parameterB = SqlParameterExtention.GetSqlParameter(parameterNameB, this.Values[1]);
 
-            var sqlcommand = $"{spaces}{this.Condition} [{this.Column}] {this.Operation} @{parameterNameA} {Constants.CONDITION_AND} @{parameterNameB}";
+            var sqlcommand = $"{spaces}{this.Condition} [{this.Column}] {this.Operation} @{parameterNameA} {Constants.WHERE_CONDITION_AND} @{parameterNameB}";
 
             var buildResult = new BuildResult(sqlcommand, new List<SqlParameter> { parameterA, parameterB });
             return buildResult;
@@ -51,8 +51,8 @@ namespace SqlBuilder
         {
             var PART = new Dictionary<string, string>
             {
-                [Constants.OPERATION_IN] = "IN",
-                [Constants.OPERATION_NOT_IN] = "NOT_IN"
+                [Constants.WHERE_OPERATION_IN] = "IN",
+                [Constants.WHERE_OPERATION_NOT_IN] = "NOT_IN"
             };
 
             var parameters = new List<SqlParameter>();

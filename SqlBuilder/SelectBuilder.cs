@@ -20,13 +20,13 @@ namespace SqlBuilder
 
         public ISelectBuilder Top(int top)
         {
-            this._top = $"{Constants.TOP} {top}";
+            this._top = $"{Constants.SELECT_TOP} {top}";
             return this;
         }
 
         public ISelectBuilder Distinct()
         {
-            this._distinct = Constants.DISTINCT;
+            this._distinct = Constants.SELECT_DISTINCT;
             return this;
         }
 
@@ -58,10 +58,10 @@ namespace SqlBuilder
 
             var columns = "\n";
             foreach (var column in this._columns)
-                columns += Constants.SELECT_SPACES + $"[{column}]" + Constants.BREAK_LINE;
+                columns += Constants.SELECT_SELECT_SPACES + $"[{column}]" + Constants.SELECT_BREAK_LINE;
 
-            sb.AppendLine(columns.RemoveLastChars(Constants.BREAK_LINE.Length));
-            sb.AppendLine($"{Constants.FROM} {this.GetTableSchema()}");
+            sb.AppendLine(columns.RemoveLastChars(Constants.SELECT_BREAK_LINE.Length));
+            sb.AppendLine($"{Constants.SELECT_FROM} {this.GetTableSchema()}");
 
             var whereResult = this.BuildWhere();
             sb.Append(whereResult.SQLCommand);
